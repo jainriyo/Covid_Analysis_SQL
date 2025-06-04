@@ -43,6 +43,8 @@ This repository contains SQL queries and a Power BI dashboard based on the publi
 - Growth rate computation over time
 
 
+NOTE: CSV files are zipped in Covid Data.zip. Please extract before use.
+
  Contact
 
 Author: Riya Jain

@@ -2,7 +2,7 @@
 
 ### 📊 SQL project using the Kaggle COVID-19 Dataset
 
-This repository contains SQL queries and a Power BI dashboard based on the publicly available [COVID-19 dataset by imdevskp on Kaggle](https://www.kaggle.com/datasets/imdevskp/corona-virus-report?select=usa_county_wise.csv). It focuses on analyzing the spread, recovery, and trend of COVID-19 cases over time across different regions of the world and the United States.
+This repository contains SQL queries  based on the publicly available [COVID-19 dataset by imdevskp on Kaggle](https://www.kaggle.com/datasets/imdevskp/corona-virus-report?select=usa_county_wise.csv). It focuses on analyzing the spread, recovery, and trend of COVID-19 cases over time across different regions of the world and the United States.
 
 ---
 

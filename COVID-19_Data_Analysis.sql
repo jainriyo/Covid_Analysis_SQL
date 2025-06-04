@@ -22,15 +22,6 @@
 
 -Dataset : https://www.kaggle.com/datasets/imdevskp/corona-virus-report?select=country_wise_latest.csv
 
--Simplification Of table names: 
-
-Table covid19               = country_wise_latest.csv
-Table covid19-5cleacomplete = covid_19_clean_complete.csv
-Table Covid191              = day_wise.csv
-Table Covid192              = full_grouped.csv
-Table Covid193              = usa_county_wise.csv
-Table covid19-4-worldometer = worldometer_data.csv
-
 ===============================================================
 */
 

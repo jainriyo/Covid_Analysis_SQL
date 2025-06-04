@@ -18,6 +18,15 @@ This repository contains SQL queries  based on the publicly available [COVID-19 
 
 ---
 
+##Simplification Of table names: 
+
+Table covid19               = country_wise_latest.csv
+Table covid19-5cleacomplete = covid_19_clean_complete.csv
+Table Covid191              = day_wise.csv
+Table Covid192              = full_grouped.csv
+Table Covid193              = usa_county_wise.csv
+Table covid19-4-worldometer = worldometer_data.csv
+
 ##  Project Goals
 
 - Clean and prepare the COVID-19 data using SQL

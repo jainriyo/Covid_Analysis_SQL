@@ -17,11 +17,24 @@
   - Identify top 10 countries by total or new cases
   - Calculate week-over-week growth rates
   - Total Confirmed Cases by Continent
-  - 
+  - Last Updated  : June 2025
 
-  Last Updated  : June 2025
+
+-Dataset : https://www.kaggle.com/datasets/imdevskp/corona-virus-report?select=country_wise_latest.csv
+
+-Simplification Of table names: 
+
+Table covid19               = country_wise_latest.csv
+Table covid19-5cleacomplete = covid_19_clean_complete.csv
+Table Covid191              = day_wise.csv
+Table Covid192              = full_grouped.csv
+Table Covid193              = usa_county_wise.csv
+Table covid19-4-worldometer = worldometer_data.csv
+
 ===============================================================
 */
+
+-- Easy QUERIES------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -53,6 +66,11 @@ WHERE covid194worldometer.c4 > 10000
 AND (covid194worldometer.c6 * 1.0 / covid194worldometer.c4) > 0.05
 ORDER BY DeathRate DESC;
 
+-----/*As per the above analysis , Yemen has the highest death rate*/----
+
+
+
+
 
 /*Population to Find Case Penetration per 1M People*/
 
@@ -61,6 +79,10 @@ SELECT covid194worldometer.c1, covid194worldometer.c4, covid194worldometer.c3,
 FROM covid194worldometer
 WHERE covid194worldometer.c3 > 0
 ORDER BY Cases_Per_Million DESC;
+
+
+----/*As per the above analysis , Qatar has the highest number of cases per million*/----
+
 
 
 
@@ -92,6 +114,9 @@ SELECT Covid191.c12, Covid191.c1,
 FROM Covid191
 ORDER BY Covid191.c12, Covid191.c1;
 
+
+
+-- TOUGHER QUERIES------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -126,6 +151,9 @@ AND (covid194worldometer.c8 * 1.0 / covid194worldometer.c4) < 0.5
 ORDER BY DeathRate DESC;
 
 
+----/*As per the above analysis , Belgium has the highest number of cases per million*/---
+
+
 
 /*Compare Case Fatality Rate Across Continents*/
 SELECT covid194worldometer.c2,
@@ -135,6 +163,9 @@ SELECT covid194worldometer.c2,
 FROM covid194worldometer
 GROUP BY covid194worldometer.c2
 ORDER BY CFR DESC;
+
+
+----/*As per the above analysis , Europe has higest Case Fatality Rate Across Continents*/----
 
 
 
@@ -148,6 +179,7 @@ FROM covid194worldometer
 ORDER BY Computed_ActiveCases DESC;
 
 
+------/*As per the above analysis , USA has higest Computed_ActiveCases*/----
 
 
 /*First Date When a Country Crossed 1000 Cases*/
@@ -188,3 +220,6 @@ FROM surges
 WHERE prev_day_cases IS NOT NULL
   AND c7 > 1.5 * prev_day_cases
 ORDER BY CAST(REPLACE(ROUND(100.0 * (c7 - prev_day_cases) / NULLIF(prev_day_cases, 0), 2) || '%', '%', '') AS REAL) DESC;
+
+
+/*As per the above analysis , we have seen that France has been Detected sudden surge (spike) in new confirmed cases*/

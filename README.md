@@ -49,4 +49,4 @@ NOTE: CSV files are zipped in Covid Data.zip. Please extract before use.
 
 Author: Riya Jain
 Email: Riya.jain08031998@gmail.com
-LinkedIn: [linkedin.com/in/yourname](https://www.linkedin.com/in/riya-jain-615019169/)
+LinkedIn: https://www.linkedin.com/in/riya-jain-615019169/
